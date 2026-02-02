@@ -1,0 +1,41 @@
+changelog:
+  exclude:
+    labels:
+      - skip-changelog
+    authors:
+      - octocat
+  categories:
+    - title: "🚀 Features"
+      labels:
+        - feature
+        - enhancement
+      prefixes:
+        - "feat:"
+        - "feature:"
+    - title: "🐛 Bug Fixes"
+      labels:
+        - bug
+        - fix
+      prefixes:
+        - "fix:"
+        - "bugfix:"
+    - title: "⚙️ Refactors"
+      prefixes:
+        - "refactor:"
+    - title: "👷 CI/CD"
+      prefixes:
+        - "ci:"
+        - "build:"
+    - title: "📝 Documentation"
+      prefixes:
+        - "docs:"
+    - title: "📦 Other Changes"
+      labels:
+        - "*"
+  render:
+    template: |
+      ## Summary
+      $CHANGES
+      
+      ---
+      **Full Changelog**: $DIFF
