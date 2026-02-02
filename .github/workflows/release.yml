@@ -16,16 +16,25 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Required for better changelog generation
+          fetch-depth: 0
 
-      - name: Generate Release
+      - name: Generate Changelog
+        id: changelog
+        run: |
+          ./generate_changelog.sh ${{ github.ref_name }} > changelog.md
+          echo "BODY<<EOF" >> $GITHUB_ENV
+          cat changelog.md >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+      - name: Create Release
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
             md2pdf.sh
             install.sh
-          generate_release_notes: true
+          body: ${{ env.BODY }}
+          generate_release_notes: false
           draft: false
           prerelease: false
         env:

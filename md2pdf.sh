@@ -4,7 +4,7 @@
 # https://github.com/SmilingBytes/md2pdf
 # License: MIT
 
-VERSION="1.0.0"
+VERSION="0.1.1"
 
 # Colors for terminal output
 RED='\033[0;31m'
