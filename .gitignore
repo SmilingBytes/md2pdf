@@ -1,0 +1,22 @@
+# Generated files
+*.pdf
+
+# Temporary files
+*.tmp
+*.temp
+*.css.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Test files
+test*.md
+sample*.md
