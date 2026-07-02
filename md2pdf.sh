@@ -4,7 +4,7 @@
 # https://github.com/SmilingBytes/md2pdf
 # License: MIT
 
-VERSION="0.1.1"
+VERSION="0.1.2"
 
 # Colors for terminal output
 RED='\033[0;31m'
@@ -82,15 +82,35 @@ blockquote {
     color: #57606a;
 }
 table {
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     width: 100%;
     margin: 0.8em 0;
     font-size: 0.92em;
 }
+thead {
+    display: table-header-group;
+}
+tr {
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+}
 th, td {
-    border: 1px solid #d0d7de;
+    border-color: #d0d7de;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    break-inside: avoid-page;
+    page-break-inside: avoid;
     padding: 7px 11px;
     text-align: left;
+}
+tr:first-child > th,
+tr:first-child > td {
+    border-top-width: 1px;
+}
+tr > th:first-child,
+tr > td:first-child {
+    border-left-width: 1px;
 }
 th {
     background: #f6f8fa;
@@ -175,15 +195,35 @@ blockquote {
     color: #8b949e;
 }
 table {
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     width: 100%;
     margin: 0.8em 0;
     font-size: 0.92em;
 }
+thead {
+    display: table-header-group;
+}
+tr {
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+}
 th, td {
-    border: 1px solid #30363d;
+    border-color: #30363d;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    break-inside: avoid-page;
+    page-break-inside: avoid;
     padding: 7px 11px;
     text-align: left;
+}
+tr:first-child > th,
+tr:first-child > td {
+    border-top-width: 1px;
+}
+tr > th:first-child,
+tr > td:first-child {
+    border-left-width: 1px;
 }
 th {
     background: #161b22;

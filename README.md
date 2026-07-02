@@ -10,6 +10,7 @@ A lightweight command-line tool that converts Markdown files into beautifully st
 - **Beautiful Themes** - GitHub-style light theme and One Dark-style dark theme
 - **Syntax Highlighting** - Full color-coded code blocks for 100+ languages
 - **Table of Contents** - Optional auto-generated TOC with configurable depth
+- **Readable Tables** - Table rows are kept together across page breaks where possible
 - **Watch Mode** - Auto-regenerate PDF on file changes
 - **Professional Typography** - Optimized fonts, spacing, and page layout
 - **Zero Configuration** - Works out of the box with sensible defaults
